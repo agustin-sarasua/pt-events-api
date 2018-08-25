@@ -1,0 +1,27 @@
+{
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "PlaceId",
+            "AttributeType": "S"
+        },
+        {
+            "AttributeName": "StartTime",
+            "AttributeType": "S"
+        }
+    ],
+    "TableName": "Events",
+    "KeySchema": [
+        {
+            "AttributeName": "PlaceId",
+            "KeyType": "HASH"
+        },
+        {
+            "AttributeName": "StartTime",
+            "KeyType": "RANGE"
+        }
+    ],
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 5,
+        "WriteCapacityUnits": 5
+    }
+}
